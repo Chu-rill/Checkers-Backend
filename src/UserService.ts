@@ -9,18 +9,23 @@ interface User {
   password: string;
 }
 
+interface Email {
+  email: string;
+}
+
 // exports.getUserByEmail = async (email: string) => {
 //   const [rows] = await connection.execute(
 //     "SELECT * FROM users WHERE email = ? LIMIT 1",
 //     [email]
 //   );
-exports.getUserByEmail = async (email: string): Promise<User | null> => {
+exports.getUserByEmail = async (email: string): Promise<Email | null> => {
   const [rows] = await connection.execute<RowDataPacket[]>(
     "SELECT * FROM users WHERE email = ? LIMIT 1",
     [email]
   );
 
-  const user = rows[0] as User;
+  const user = rows[0] as Email;
 
   return user;
 };
+// console.log('hello')
