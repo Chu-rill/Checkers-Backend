@@ -28,4 +28,4 @@ exports.getUserByEmail = async (email: string): Promise<Email | null> => {
 
   return user;
 };
-// console.log('hello')
+console.log('hello')
