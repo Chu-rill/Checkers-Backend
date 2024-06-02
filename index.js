@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 //import your routes
-app.get("/", (req: any, res: any) => {
+app.get("/", (req, res) => {
   res.json({ status: "success request" });
 });
 
