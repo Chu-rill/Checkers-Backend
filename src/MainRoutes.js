@@ -1,11 +1,8 @@
 // all authentication routes come here
 const express = require("express");
-const AuthController = require("../controllers/AuthController");
-const validator = require("../middlewares/ValidationMiddleware");
-const {
-  RegisterValidation,
-  loginValidation,
-} = require("../validations/AuthValidation");
+const AuthController = require("./AuthController");
+const validator = require("./ValidationMiddleware");
+const { RegisterValidation, loginValidation } = require("./Vallidation");
 const authRoutes = express.Router();
 
 authRoutes.post(
